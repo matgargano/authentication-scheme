@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "password": "$2b$10$QGvo5O5SV5oLpI5nSwav5OZv9XVAk5x5nGgCDKRIF2zv5Oh5c5nxy",
+      "email": "admin@example.com",
+      "role": "admin"
+    },
+    {
+      "email": "mat@statenweb.com",
+      "password": "$2a$10$TQ3DvgCl1XYdLadim9qmquD.MmO02nwvOmWBeUdEqIU0b0YxoUSGi",
+      "username": "mat",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "content": "This is a sample post."
+    }
+  ],
+  "private": [
+    {
+      "id": 1,
+      "secret": "This is a secret message."
+    }
+  ]
+}
