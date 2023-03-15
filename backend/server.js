@@ -21,7 +21,11 @@ app.use(middlewares);
 
 // Add the /api/auth/me endpoint to check if user is authenticated
 app.get('/api/auth/me', (req, res) => {
-  const token = req.headers.authorization.substring(7);``
+  let token = null;
+  if(req && req?.headers?.authorization){
+    token = req.headers.authorization.substring(7);
+  }
+  
 
   if (!token) {
     res.status(401).json({ message: 'Unauthorized' });
@@ -40,7 +44,7 @@ app.get('/api/auth/me', (req, res) => {
       return;
     }
 
-    res.json({ user, isAuthenticated: true });
+    res.json({ isAuthenticated: true });
   } catch (error) {
     res.status(401).json({ message: 'Unauthorized' });
   }

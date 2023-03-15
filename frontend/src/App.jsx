@@ -5,7 +5,6 @@ import './App.css';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
 import WelcomePage from './components/WelcomePage';
-import PrivateRoute from './RouteHelpers/PrivateRoute';
 import { TOKEN_NAME } from './utils/constants';
 
 function App({ authenticated }) {
@@ -16,7 +15,7 @@ function App({ authenticated }) {
   return (
     <div className="App">
       <p>
-        <Link to="/register">Register</Link> | <Link to="/login">Login</Link>{' '}
+        <Link to="/register">Register</Link> | <Link to="/login">Login</Link>{' '}| <Link to="/welcome">Welcome</Link>{' '}
       </p>
       <Routes>
         <Route path="/login" element={<LoginForm />} />

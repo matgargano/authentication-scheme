@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import getAuthHeaders from '../utils/getAuthHeaders';
 import validateStatus from '../utils/validateStatus';
@@ -18,7 +18,7 @@ function useRequireAuth() {
         },}
       );
       
-      debugger;
+
       if (!data.isAuthenticated) {
         navigate('/login');
       }
